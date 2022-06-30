@@ -13,6 +13,7 @@
 		8401AFCD286CD341000B50B3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8401AFCC286CD341000B50B3 /* FirebaseFirestore */; };
 		8401AFCF286CD341000B50B3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8401AFCE286CD341000B50B3 /* FirebaseStorage */; };
 		8401AFD1286DD315000B50B3 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401AFD0286DD315000B50B3 /* FeedTableViewCell.swift */; };
+		8401AFD4286E1FA6000B50B3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8401AFD3286E1FA6000B50B3 /* Post.swift */; };
 		84135548284BA1B400DECC84 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84135547284BA1B400DECC84 /* HeaderView.swift */; };
 		8413554A284BA1E600DECC84 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84135549284BA1E600DECC84 /* HeaderView.xib */; };
 		843184CA28578DCB009D203D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843184C928578DCB009D203D /* APIManager.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		8401AFC5286CD06F000B50B3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8401AFD0286DD315000B50B3 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		8401AFD3286E1FA6000B50B3 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		84135547284BA1B400DECC84 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		84135549284BA1E600DECC84 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		843184C928578DCB009D203D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -71,6 +73,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8401AFD2286E1F89000B50B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8401AFD3286E1FA6000B50B3 /* Post.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8401AFD5286E1FD1000B50B3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				843184C928578DCB009D203D /* APIManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8401AFD6286E209F000B50B3 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		84135546284BA19000DECC84 /* Header */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,48 +105,47 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
-		84452AA82847CD3200BA848D /* Feed */ = {
+		84452AA82847CD3200BA848D /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				84452AAD2847D04C00BA848D /* FeedViewController.swift */,
-				843184C928578DCB009D203D /* APIManager.swift */,
 				8401AFD0286DD315000B50B3 /* FeedTableViewCell.swift */,
 			);
-			path = Feed;
+			path = Home;
 			sourceTree = "<group>";
 		};
-		84452AA92847CD3A00BA848D /* Search */ = {
+		84452AA92847CD3A00BA848D /* Hub */ = {
 			isa = PBXGroup;
 			children = (
 				84452AAF2847D05700BA848D /* SearchViewController.swift */,
 			);
-			path = Search;
+			path = Hub;
 			sourceTree = "<group>";
 		};
-		84452AAA2847CD4200BA848D /* Chat */ = {
+		84452AAA2847CD4200BA848D /* Messenger */ = {
 			isa = PBXGroup;
 			children = (
 				84452AB12847D06200BA848D /* ChatViewController.swift */,
 			);
-			path = Chat;
+			path = Messenger;
 			sourceTree = "<group>";
 		};
-		84452AAB2847CD4C00BA848D /* Notifications */ = {
+		84452AAB2847CD4C00BA848D /* Clips */ = {
 			isa = PBXGroup;
 			children = (
 				84452AB32847D06F00BA848D /* NotificationsViewController.swift */,
 			);
-			path = Notifications;
+			path = Clips;
 			sourceTree = "<group>";
 		};
-		84452AAC2847CD5600BA848D /* Profile */ = {
+		84452AAC2847CD5600BA848D /* Videos */ = {
 			isa = PBXGroup;
 			children = (
 				84135546284BA19000DECC84 /* Header */,
 				84452AB52847D07A00BA848D /* ProfileViewController.swift */,
 				84452AB72847D87B00BA848D /* ProfileTableViewCell.swift */,
 			);
-			path = Profile;
+			path = Videos;
 			sourceTree = "<group>";
 		};
 		84EC805C284291A3006F6AA7 = {
@@ -144,9 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				84EC807C284291C8006F6AA7 /* App */,
-				84EC807D284291DC006F6AA7 /* Main */,
-				84EC807E284292EF006F6AA7 /* TabBar */,
-				84EC8073284291A5006F6AA7 /* LaunchScreen.storyboard */,
+				8401AFD5286E1FD1000B50B3 /* Service */,
+				8401AFD2286E1F89000B50B3 /* Model */,
 				84EC8071284291A5006F6AA7 /* Assets.xcassets */,
 				84EC8076284291A5006F6AA7 /* Info.plist */,
 				8401AFC5286CD06F000B50B3 /* GoogleService-Info.plist */,
@@ -157,6 +180,14 @@
 		84EC807C284291C8006F6AA7 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				84EC807D284291DC006F6AA7 /* Main */,
+				84EC807E284292EF006F6AA7 /* TabBar */,
+				8401AFD6286E209F000B50B3 /* Menu */,
+				84452AA82847CD3200BA848D /* Home */,
+				84452AA92847CD3A00BA848D /* Hub */,
+				84452AAA2847CD4200BA848D /* Messenger */,
+				84452AAB2847CD4C00BA848D /* Clips */,
+				84452AAC2847CD5600BA848D /* Videos */,
 				84EC8068284291A3006F6AA7 /* AppDelegate.swift */,
 				84EC806A284291A3006F6AA7 /* SceneDelegate.swift */,
 			);
@@ -166,6 +197,7 @@
 		84EC807D284291DC006F6AA7 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				84EC8073284291A5006F6AA7 /* LaunchScreen.storyboard */,
 				84EC806E284291A3006F6AA7 /* Main.storyboard */,
 				84EC806C284291A3006F6AA7 /* ViewController.swift */,
 			);
@@ -175,11 +207,6 @@
 		84EC807E284292EF006F6AA7 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				84452AA82847CD3200BA848D /* Feed */,
-				84452AA92847CD3A00BA848D /* Search */,
-				84452AAA2847CD4200BA848D /* Chat */,
-				84452AAB2847CD4C00BA848D /* Notifications */,
-				84452AAC2847CD5600BA848D /* Profile */,
 				84EC807F2842930A006F6AA7 /* TabBar.storyboard */,
 				84EC8081284295C5006F6AA7 /* TabBarController.swift */,
 			);
@@ -274,6 +301,7 @@
 				84EC806D284291A3006F6AA7 /* ViewController.swift in Sources */,
 				84EC8082284295C5006F6AA7 /* TabBarController.swift in Sources */,
 				84452AB82847D87B00BA848D /* ProfileTableViewCell.swift in Sources */,
+				8401AFD4286E1FA6000B50B3 /* Post.swift in Sources */,
 				8401AFD1286DD315000B50B3 /* FeedTableViewCell.swift in Sources */,
 				84452AB22847D06200BA848D /* ChatViewController.swift in Sources */,
 				84452AAE2847D04C00BA848D /* FeedViewController.swift in Sources */,

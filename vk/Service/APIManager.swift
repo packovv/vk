@@ -50,10 +50,3 @@ class APIManager {
         })
     }
 }
-
-struct Post {
-    let name: String
-    let date: String
-    let text: String
-    let image: UIImage
-}
